@@ -1,12 +1,19 @@
-﻿namespace Database.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Database.Model
 {
     public class User
     {
-        public string Name { get; set; }
-        public string Mail { get; set; }
-        public string Password { get; set; }
-
-        public string Designation { get; set; }
-        public string Mode { get; set; }
+        [Key]
+        [Required]
+        public string ? Name { get; set; }
+        [Required]   
+        public string ? Mail { get; set; }
+        [Required]   
+        public string ? Password { get; set; }
+        [Required]   
+        public string ? Designation { get; set; }
+        [Required]   
+        public string ? Mode { get; set; }
     };
 }
