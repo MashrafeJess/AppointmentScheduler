@@ -16,7 +16,7 @@ namespace Database.Model
         [Required]
         public string ? To { get; set; }
         [Required]
-        public DateTime ? Appoint { get; set; }
+        public DateTime ? AppointTime { get; set; }
         [Required]
 
         public int ? RoomNumber { get; set; }
