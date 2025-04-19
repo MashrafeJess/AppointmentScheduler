@@ -10,9 +10,8 @@ namespace Business.UserModel
     public class AppointmentForm : BaseModel
     {
         public string RequestedBy { get; set; }
-        public string RequestedTo { get; set; }
-        public DateTime AppointTime { get; set; }
-        public double Duration { get; set; }    
-        public int RoomNO { get; set; }
+        public string RequestedFor { get; set; }
+        public TimeOnly AppointTime { get; set; }
+        public DateOnly Date { get; set; }
     }
 }

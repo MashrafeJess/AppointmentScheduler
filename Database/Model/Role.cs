@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace Database.Model
 {
-    public class AppointmentStatus
+    public class Role : BaseModel
     {
         [Key]
-        public int StatusId { get; set; }
-        public string StatusName { get; set; }
-        public int StatusNumber { get; set; }
+        public int ? RoleNum { get; set; }
+        public string ? RoleName { get; set; }
     }
 }

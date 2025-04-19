@@ -16,7 +16,6 @@ namespace Business.UserModel
         [Required, EmailAddress]
         public string? Email { get; set; }
         [Required, MinLength(8)]
-        [RegularExpression(@"^(?=.*[\W_]).+$")]
         public string? Password { get; set; }
         public string? Designation { get; set; }
         public int? RoomNumber { get; set; }

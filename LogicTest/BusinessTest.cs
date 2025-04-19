@@ -1,6 +1,9 @@
 ﻿using Business;
 using Business.UserModel;
 using Business.Sections.UserSection;
+using Business.Sections.RoleSection;
+using Business.Sections.SlotSection;
+using Database.Model;
 
 namespace LogicTest
 {
@@ -13,7 +16,10 @@ namespace LogicTest
             // Call methods
             //Registration();
             //LogIn();
-            Update();
+            //Update();
+           MakeAppointment();
+            //AddRole();
+            // AddSlot();
         }
 
         static void Registration()
@@ -87,5 +93,31 @@ namespace LogicTest
                     Console.WriteLine("Inner Exception: " + ex.InnerException.Message);
             }
         }
+        static void MakeAppointment()
+        {
+            AppointmentForm form = new AppointmentForm();
+            form.RequestedBy = Console.ReadLine();
+            form.RequestedFor = Console.ReadLine();
+            form.AppointTime = TimeOnly.Parse(Console.ReadLine());
+            form.Date = DateOnly.Parse(Console.ReadLine());
+            Result result = new AppointmentService().Appointment(form);
+            Console.WriteLine(result.Message);
+        }
+        static void AddRole()
+        {
+            Role role = new Role();
+            role.RoleName = Console.ReadLine();
+            Result result = new RoleService().Add(role);
+            Console.WriteLine(result.Message);
+        }
+        static void AddSlot()
+        {
+            Slots slot = new Slots();
+            slot.Slot = TimeOnly.Parse(Console.ReadLine());
+            slot.UserId = Console.ReadLine();
+            Result result = new SlotService().AddSlot(slot);
+            Console.WriteLine(result.Message);
+        }
+
     }
 }

@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace Database.Model
 {
-    public class Mode
+    public class Slots
     {
         [Key]
-        public int ? Role { get; set; }
-        public string ? ModeName { get; set; }
+        public int ? SlotId { get; set; }
+        public TimeOnly ? Slot {  get; set; }
+        public string ? UserId { get; set; }
     }
 }

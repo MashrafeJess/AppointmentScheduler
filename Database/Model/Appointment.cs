@@ -11,12 +11,11 @@ namespace Database.Model
         public string RequestedBy { get; set; }
 
         [Required]
-        public string RequestedTo { get; set; }
+        public string RequestedFor { get; set; }
 
         [Required]
         public DateTime AppointTime { get; set; }
-        public string Status { get; set; }
-        public double Duration { get; set; }
         public int RoomNo { get; set; }
+        public int AppointmentStatus { get; set; }
     }
 }
