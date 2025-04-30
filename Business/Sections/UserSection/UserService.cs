@@ -25,10 +25,7 @@ namespace Business.Sections.UserSection
                 PasswordHash = new PasswordHasher<object>().HashPassword(user, user.Password),
                 Designation = user.Designation,
                 RoomNum = user.RoomNumber,
-                Mode = user.Mode,
-                CreatedBy = user.CreatedBy,
-                UpdatedBy = user.UpdatedBy,
-                UpdatedDate = user.UpdatedDate // Eita automatic hoye jawar kotha na!!!
+                Mode = user.Mode
             };
             schedulerContext.UserInfo.Add(userInfo);
             return Result.DbCommit(schedulerContext, "Successfully registered", null, user);
