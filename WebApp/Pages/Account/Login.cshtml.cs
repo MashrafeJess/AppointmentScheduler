@@ -1,7 +1,6 @@
 using Business;
 using Business.UserModel;
-using Business.Sections;
-using Microsoft.AspNetCore.Authentication.Cookies;
+using Database.Model;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
