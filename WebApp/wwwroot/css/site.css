@@ -16,3 +16,50 @@ html {
 body {
   margin-bottom: 60px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+.headline {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Cascadia Code, sans-serif;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 5px 5px rgba(0, 0, 0, 1);
+}
+
+.custom-icon {
+    background-color: cadetblue;
+}
+
+.bg-cover {
+    background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    max-width: 95%;
+}
+
+@media (max-width: 768px) {
+    .bg-cover {
+        min-height: 200px;
+    }
+}
+
+.hov {
+    font-family: 'Cal Sans', sans-serif;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+    .hov:hover {
+        transform: scale(1.20); /* grow */
+        color: black;
+    }
+
+.footer_space {
+    margin-top: 5rem;
+}
