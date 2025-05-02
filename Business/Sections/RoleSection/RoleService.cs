@@ -30,7 +30,7 @@ namespace Business.Sections.RoleSection
         }
         public Result Update(Role model)
         {
-            Role mode = schedulerContext.Role.Where(x => x.RoleName == model.RoleName).FirstOrDefault();
+            Role mode = schedulerContext.Role.Where(x => x.RoleNum == model.RoleNum).FirstOrDefault();
             if (mode == null)
             {
                 return new Result(false, "No such Role exists in Database!!");

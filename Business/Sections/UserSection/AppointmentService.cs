@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Business.UserModel;
 using Database.Context;
 using Database.Model;
+using Microsoft.AspNetCore.Identity;
 
 namespace Business.Sections.UserSection
 {
@@ -40,9 +41,16 @@ namespace Business.Sections.UserSection
             return Result.DbCommit(schedulercontext, "Successfully registered", null, appointment);
         }
 
-        public Result UpdateAppointment()
+        public Result UpdateAppointment(string id,AppointmentForm form)
         {
+            DateTime? dateTime = form.Date.ToDateTime(form.AppointTime);
+            Appointment? appointment = schedulercontext.Appointment.Where(x => x.AppointmentId == id).FirstOrDefault();
+            if (appointment == null)
+                return new Result(false,"Appointment not found");
+            if (!string.IsNullOrEmpty(form.RequestedFor)) appointment.RequestedFor = form.RequestedFor;
+            if (dateTime.HasValue) appointment.AppointTime = dateTime.Value;
 
+            return Result.DbCommit(schedulercontext, "successfully updated", null, form);
         }
     }
 }

@@ -1,14 +1,14 @@
+using System.Security.Claims;
 using Business;
+using Business.Sections.UserSection;
 using Business.UserModel;
 using Database.Model;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Security.Claims;
-using Database.Model;
-using Business.Sections.UserSection;
 
-namespace Web.Pages.Account
+namespace WebApp.Pages.Account
 {
     public class LoginModel : PageModel
     {

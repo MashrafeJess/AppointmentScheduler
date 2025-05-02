@@ -8,18 +8,18 @@ namespace Database.Model
         public string UserId { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
-        public string ?Name { get; set; }
+        public string? Name { get; set; }
 
         [Required]
-        [EmailAddress] 
-        public string ?Email { get; set; }
+        [EmailAddress]
+        public string? Email { get; set; }
 
         [Required]
-        public string ? PasswordHash { get; set; }
+        public string? PasswordHash { get; set; }
 
         [Required]
-        public string ? Designation { get; set; } 
-        public int ? RoomNum{ get; set; } 
-        public int ? Mode { get; set; } 
+        public string? Designation { get; set; }
+        public int? RoomNum { get; set; }
+        public int? Mode { get; set; }
     }
 }

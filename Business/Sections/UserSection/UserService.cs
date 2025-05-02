@@ -25,7 +25,7 @@ namespace Business.Sections.UserSection
                 PasswordHash = new PasswordHasher<object>().HashPassword(user, user.Password),
                 Designation = user.Designation,
                 RoomNum = user.RoomNumber,
-                Mode = user.Mode,
+                Mode = user.Mode== 0?3 : user.Mode,
                 CreatedBy = user.CreatedBy,
                 UpdatedBy = user.UpdatedBy,
                 UpdatedDate = user.UpdatedDate

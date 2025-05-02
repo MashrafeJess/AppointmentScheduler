@@ -17,7 +17,7 @@ namespace LogicTest
             //Registration();
             //LogIn();
             //Update();
-           MakeAppointment();
+          // MakeAppointment();
             //AddRole();
             // AddSlot();
         }
