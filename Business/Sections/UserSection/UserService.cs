@@ -34,7 +34,7 @@ namespace Business.Sections.UserSection
             return Result.DbCommit(schedulerContext, "Successfully registered", null, user);
         }
 
-        public Result Login(MockForm user)
+        public Result Login(MockLoginForm user)
         {
             UserInfo? userInfo = schedulerContext.UserInfo?.Where(x => x.Email == user.Email).FirstOrDefault();
 

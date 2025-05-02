@@ -52,7 +52,7 @@ namespace LogicTest
         {
             try
             {
-                MockForm form = new MockForm();
+                MockLoginForm form = new MockLoginForm();
                 Console.WriteLine("Enter Email:");
                 form.Email = Console.ReadLine();
                 Console.WriteLine("Enter Password:");
